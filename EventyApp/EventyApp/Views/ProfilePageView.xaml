@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EventyApp.Views.ProfilePageView">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <Label FontSize="31" FontFamily="Roboto" FontAttributes="Bold" Text="Your profile" HorizontalOptions="Start"/>
+                    <Label FontSize="16" FontFamily="Roboto" Text="Log in to start planning your dream event." HorizontalOptions="Start"/>
+                <Button HeightRequest="50" 
+                         TextColor="White" 
+                         Text="Log in"  
+                         BackgroundColor="#FF5353"
+                         Command="{Binding LogInCommand}"/>
+                <Label FontSize="16" FontFamily="Roboto" Text="Don't have an account?" HorizontalOptions="Start"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
