@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventyApp.Android", "Eventy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventyApp.iOS", "EventyApp\EventyApp.iOS\EventyApp.iOS.csproj", "{F29AF4A2-10E0-4CFF-A6B6-C9F2FAF999C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventyApp", "EventyApp\EventyApp\EventyApp.csproj", "{55B81142-39C1-44AB-B70E-D855812408FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventyApp", "EventyApp\EventyApp\EventyApp.csproj", "{55B81142-39C1-44AB-B70E-D855812408FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
