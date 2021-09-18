@@ -5,16 +5,29 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Spacing="15">
-                <Label Margin="35,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
-                <Label Margin="40,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
+                <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
+                <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
                 <Button Margin="50,0,50,0"
                         HeightRequest="50" 
                         TextColor="White" 
                         Text="Log in"  
                         BackgroundColor="{StaticResource primary}"
                         Command="{Binding LogInCommand}"/>
-                <Label Margin="40,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Don't have an account?"/>
-                
+
+                <Label Margin="50,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Don't have an account? "/>
+                            <Span Text="sign up"
+                                    TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
