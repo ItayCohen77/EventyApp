@@ -28,6 +28,9 @@
                     </Label.FormattedText>
                 </Label>
 
+                <Label Text="Proxy:" />
+                <Label Text="{Binding S}"/>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

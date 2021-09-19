@@ -15,6 +15,7 @@ namespace EventyApp.Views
         public ProfilePageView()
         {
             InitializeComponent();
+            BindingContext = new ViewModels.ProfilePageViewModel();
         }
     }
 }
