@@ -47,6 +47,7 @@ namespace EventyApp.ViewModels
 
                     this.s = value;
                     OnPropertyChanged("S");
+
                 }
             }
         }
