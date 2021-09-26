@@ -1,37 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="EventyApp.Views.ProfilePageView">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Spacing="15">
-                <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
-                <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
-                <Button Margin="50,0,50,0"
+
+            <xct:TabView
+                TabStripPlacement="Bottom"
+                TabStripBackgroundColor="Blue"
+                TabStripHeight="60"
+                TabIndicatorColor="Yellow"
+                TabContentBackgroundColor="Yellow"
+                    >
+
+                    <xct:TabViewItem
+                    Icon="triangle.png"
+                    Text="Tab 1"
+                    TextColor="White"
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                    <StackLayout Spacing="15">
+                        <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
+                        <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
+                        <Button Margin="50,0,50,0"
                         HeightRequest="50" 
                         TextColor="White" 
                         Text="Log in"  
                         BackgroundColor="{StaticResource primary}"
                         Command="{Binding LogInCommand}"/>
 
-                <Label Margin="50,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" >
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="Don't have an account? "/>
-                            <Span Text="sign up"
+                        <Label Margin="50,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Don't have an account? "/>
+                                    <Span Text="sign up"
                                     TextDecorations="Underline">
-                                <Span.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
-                                </Span.GestureRecognizers>
-                            </Span>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding SignUpCommand}"/>
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
 
-                <Label Text="Proxy:" />
-                <Label Text="{Binding S}"/>
+                        <Label Text="{Binding S}"/>
+                    </StackLayout>
+                </xct:TabViewItem>
 
-            </StackLayout>
+                    <xct:TabViewItem
+                    Icon="circle.png"
+                    Text="Tab 2"
+                    TextColor="White"
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                        <Grid>
+                            <Label    
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent2" />
+                        </Grid>
+                    </xct:TabViewItem>
+                </xct:TabView>
+
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
