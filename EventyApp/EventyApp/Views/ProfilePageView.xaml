@@ -8,18 +8,25 @@
 
             <xct:TabView
                 TabStripPlacement="Bottom"
-                TabStripBackgroundColor="Blue"
-                TabStripHeight="60"
-                TabIndicatorColor="Yellow"
-                TabContentBackgroundColor="Yellow"
-                    >
+                TabStripHeight="20"
+                IsSwipeEnabled="False"
+                IsTabTransitionEnabled="False">
 
-                    <xct:TabViewItem
-                    Icon="triangle.png"
+                <xct:TabViewItem
+                    Icon="circle.png"
                     Text="Tab 1"
-                    TextColor="White"
-                    TextColorSelected="Yellow"
+                    TextColor="Black"
                     FontSize="12">
+                    <Grid>
+                        <Label Text="The" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
+                        <Label Text="Greatest" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
+                        <Label Text="Moments" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
+                        <Image Source="BackgroundImage4.jpg"  VerticalOptions="Start"/>
+                    </Grid>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                   Icon="">
                     <StackLayout Spacing="15">
                         <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
                         <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
@@ -45,25 +52,49 @@
                         </Label>
 
                         <Label Text="{Binding S}"/>
+
+                        <Image Source="Heart2.png"/>
                     </StackLayout>
                 </xct:TabViewItem>
 
                     <xct:TabViewItem
                     Icon="circle.png"
-                    Text="Tab 2"
-                    TextColor="White"
-                    TextColorSelected="Yellow"
+                    Text="Tab 3"
+                    TextColor="Black"
                     FontSize="12">
                         <Grid>
                             <Label    
                             HorizontalOptions="Center"
                             VerticalOptions="Center"
-                            Text="TabContent2" />
+                            Text="TabContent3" />
                         </Grid>
                     </xct:TabViewItem>
-                </xct:TabView>
 
-            
+                    <xct:TabViewItem
+                        Icon="Inbox.png"
+                        TextColor="Black"
+                        FontSize="12">
+                        <Grid>
+                            <Label    
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Text="TabContent4" />
+                        </Grid>
+                    </xct:TabViewItem>
+
+                    <xct:TabViewItem
+                       Icon="Profile.png"
+                       TextColor="Black"
+                       FontSize="12">
+                        <Grid>
+                            <Label    
+                                  HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  Text="TabContent5" />
+                        </Grid>
+                    </xct:TabViewItem>
+            </xct:TabView>
+      
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
