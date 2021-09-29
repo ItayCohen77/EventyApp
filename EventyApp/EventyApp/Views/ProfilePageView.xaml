@@ -18,22 +18,30 @@
                     TextColor="Black"
                     FontSize="12">
                     <Grid>
-                        <Label Text="The" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
-                        <Label Text="Greatest" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
-                        <Label Text="Moments" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
                         <Image Source="BackgroundImage4.jpg"  VerticalOptions="Start"/>
+                        <StackLayout Spacing="-5">
+                            <Button Margin="10,14,10,25" HeightRequest="42" TextColor="Black" Text="Let's start your event" FontSize="16" FontAttributes="Bold" CornerRadius="50" BackgroundColor="White" Command="{Binding SearchCommand}"/>
+                            <Image Margin="10" Source="Srearch.png" HeightRequest="10" WidthRequest="10"/>
+                            <Label Margin="10,0" Text="The" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
+                            <Label Margin="10,0" Text="Greatest" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
+                            <Label Margin="10,0" Text="Moments" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
+                            <Button Margin="10,15,290,0" HeightRequest="40" WidthRequest="20" CornerRadius="5" Text="Get inspired" Command="{Binding InspiredCommand}" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="16"/>
+                            <Label Margin="10,20,0,0" Text="Dreams come true with eventy" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                        </StackLayout>
                     </Grid>
                 </xct:TabViewItem>
 
                 <xct:TabViewItem
-                   Icon="">
+                    Icon="">
                     <StackLayout Spacing="15">
                         <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
                         <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
                         <Button Margin="50,0,50,0"
-                        HeightRequest="50" 
+                        HeightRequest="50"
+                        CornerRadius="5"
                         TextColor="White" 
-                        Text="Log in"  
+                        Text="Log in"
+                        FontSize="16"
                         BackgroundColor="{StaticResource primary}"
                         Command="{Binding LogInCommand}"/>
 
@@ -84,13 +92,16 @@
 
                     <xct:TabViewItem
                        Icon="Profile.png"
+                       HeightRequest="20"
+                       WidthRequest="20"
+                       Text="Tab 1"
                        TextColor="Black"
                        FontSize="12">
                         <Grid>
-                            <Label    
-                                  HorizontalOptions="Center"
-                                  VerticalOptions="Center"
-                                  Text="TabContent5" />
+                        <Label    
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                Text="TabContent5" />
                         </Grid>
                     </xct:TabViewItem>
             </xct:TabView>
