@@ -20,13 +20,14 @@
                     <Grid>
                         <Image Source="BackgroundImage4.jpg"  VerticalOptions="Start"/>
                         <StackLayout Spacing="-5">
-                            <Button Margin="10,14,10,25" HeightRequest="42" TextColor="Black" Text="Let's start your event" FontSize="16" FontAttributes="Bold" CornerRadius="50" BackgroundColor="White" Command="{Binding SearchCommand}"/>
+                            <SearchBar Margin="10,14,10,5" SearchCommand="{Binding SearchCommand}" Placeholder="Let's start your event" BackgroundColor="White" TextColor="Black" FontSize="16"/>
                             <Image Margin="10" Source="Srearch.png" HeightRequest="10" WidthRequest="10"/>
                             <Label Margin="10,0" Text="The" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
                             <Label Margin="10,0" Text="Greatest" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
                             <Label Margin="10,0" Text="Moments" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
-                            <Button Margin="10,15,290,0" HeightRequest="40" WidthRequest="20" CornerRadius="5" Text="Get inspired" Command="{Binding InspiredCommand}" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="16"/>
-                            <Label Margin="10,20,0,0" Text="Dreams come true with eventy" TextColor="White" FontSize="16" FontAttributes="Bold"/>
+                            <Button Margin="10,15,290,0" HeightRequest="40" WidthRequest="30" CornerRadius="5" Text="Get inspired" Command="{Binding InspiredCommand}" BackgroundColor="White" TextColor="Black" FontAttributes="Bold" FontSize="16"/>
+                            <Label Margin="10,20,0,0" Text="Dreams come true with eventy" TextColor="White" FontSize="14" FontAttributes="Bold"/>
+                            <Label Margin="10,180,0,0" Text="Explore nearby" TextColor="Black" FontSize="24" FontAttributes="Bold"/>
                         </StackLayout>
                     </Grid>
                 </xct:TabViewItem>
