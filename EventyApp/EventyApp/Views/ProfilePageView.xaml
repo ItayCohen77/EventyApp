@@ -20,7 +20,9 @@
                     <Grid>
                         <Image Source="BackgroundImage4.jpg"  VerticalOptions="Start"/>
                         <StackLayout Spacing="-5">
-                            <SearchBar Margin="10,14,10,5" SearchCommand="{Binding SearchCommand}" Placeholder="Let's start your event" BackgroundColor="White" TextColor="Black" FontSize="16"/>
+                            <Frame Margin="20,14,20,5" CornerRadius="50" BackgroundColor="White" HeightRequest="42" WidthRequest="20" Padding="0">
+                                <SearchBar SearchCommand="{Binding SearchCommand}" Placeholder="Let's start your event" BackgroundColor="White" TextColor="Black" FontSize="16" FontAttributes="Bold" HeightRequest="15" WidthRequest="20"/>
+                            </Frame>
                             <Image Margin="10" Source="Srearch.png" HeightRequest="10" WidthRequest="10"/>
                             <Label Margin="10,0" Text="The" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
                             <Label Margin="10,0" Text="Greatest" Style="{StaticResource labelStyle}" TextColor="White" FontAttributes="Bold" FontSize="40"/>
