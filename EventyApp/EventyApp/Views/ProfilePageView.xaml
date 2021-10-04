@@ -20,7 +20,7 @@
                     <Grid>
                         <Image Source="BackgroundImage4.jpg"  VerticalOptions="Start"/>
                         <StackLayout Spacing="-5">
-                            <Frame Margin="20,14,20,5" CornerRadius="50" BackgroundColor="White" HeightRequest="42" WidthRequest="20" Padding="0">
+                            <Frame Margin="20,20,20,5" CornerRadius="50" BackgroundColor="White" HeightRequest="42" WidthRequest="20" Padding="0">
                                 <SearchBar SearchCommand="{Binding SearchCommand}" Placeholder="Let's start your event" BackgroundColor="White" TextColor="Black" FontSize="16" FontAttributes="Bold" HeightRequest="15" WidthRequest="20"/>
                             </Frame>
                             <Image Margin="10" Source="Srearch.png" HeightRequest="10" WidthRequest="10"/>
@@ -35,9 +35,12 @@
                 </xct:TabViewItem>
 
                 <xct:TabViewItem
-                    Icon="">
+                    Icon="circle.png"
+                    Text="Tab 2"
+                    TextColor="Black"
+                    FontSize="12">
                     <StackLayout Spacing="15">
-                        <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
+                        <Label Margin="20,20,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Your profile"/>
                         <Label Margin="20,0,0,0" Style="{StaticResource labelStyle}" FontSize="16" Text="Log in to start planning your dream event."/>
                         <Button Margin="50,0,50,0"
                         HeightRequest="50"
@@ -62,51 +65,119 @@
                             </Label.FormattedText>
                         </Label>
 
-                        <Label Text="{Binding S}"/>
+                        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="0.5" Color="Gray"/>
 
-                        <Image Source="Heart2.png"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70*"/>
+                                <ColumnDefinition Width="30*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Margin="50,0,0,0" Style="{StaticResource labelStyle}" FontSize="22">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Settings">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding SettingsCommand}"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Image HeightRequest="45" WidthRequest="45" VerticalOptions="CenterAndExpand" Grid.Column="1" Source="Settings.png"/>
+                        </Grid>
+                       
+                        <BoxView Margin="51,0,49,0" HorizontalOptions="FillAndExpand" HeightRequest="0.5" Color="Gray"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70*"/>
+                                <ColumnDefinition Width="30*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Margin="50,0,0,0" Style="{StaticResource labelStyle}" FontSize="22">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Get help">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding GetHelpCommand}"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Image HeightRequest="50" WidthRequest="50" VerticalOptions="CenterAndExpand" Grid.Column="1" Source="GetHelp.png"/>
+                        </Grid>
+
+                        <BoxView Margin="51,0,49,0" HorizontalOptions="FillAndExpand" HeightRequest="0.5" Color="Gray"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70*"/>
+                                <ColumnDefinition Width="30*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label VerticalOptions="CenterAndExpand" Grid.Column="0" Margin="50,0,0,0" Style="{StaticResource labelStyle}" FontSize="22">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="Host your estate">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding HostCommand}"/>
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <Image HeightRequest="50" WidthRequest="50" VerticalOptions="CenterAndExpand" Grid.Column="1" Source="Host.png"/>
+                        </Grid>
+                        
+                        <Label Text="{Binding S}"/>
+                        
                     </StackLayout>
                 </xct:TabViewItem>
 
-                    <xct:TabViewItem
+                <xct:TabViewItem
                     Icon="circle.png"
                     Text="Tab 3"
                     TextColor="Black"
                     FontSize="12">
-                        <Grid>
-                            <Label    
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"
-                            Text="TabContent3" />
-                        </Grid>
-                    </xct:TabViewItem>
+                    <StackLayout Spacing="15">
+                        <Label Margin="20,20,0,0" Style="{StaticResource labelStyle}" FontSize="31" FontAttributes="Bold" Text="Login"/>
+                        <Frame Margin="20,20,20,0" CornerRadius="11" BorderColor="Gray" HeightRequest="150" WidthRequest="60" Padding="0">
+                            <StackLayout>
+                                <BoxView Margin="20,74,20,74"  HeightRequest="1" Color="Gray"/>
+                            </StackLayout>
+                        </Frame>
 
-                    <xct:TabViewItem
-                        Icon="Inbox.png"
-                        TextColor="Black"
-                        FontSize="12">
-                        <Grid>
-                            <Label    
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                Text="TabContent4" />
-                        </Grid>
-                    </xct:TabViewItem>
+                        
 
-                    <xct:TabViewItem
-                       Icon="Profile.png"
-                       HeightRequest="20"
-                       WidthRequest="20"
-                       Text="Tab 1"
-                       TextColor="Black"
-                       FontSize="12">
-                        <Grid>
-                        <Label    
-                                HorizontalOptions="Center"
-                                VerticalOptions="Center"
-                                Text="TabContent5" />
-                        </Grid>
+
+                    </StackLayout>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                    Icon="circle.png"
+                    Text="Tab 4"
+                    TextColor="Black"
+                    FontSize="12">
+                      <Grid>
+                          <Label    
+                              HorizontalOptions="Center"
+                              VerticalOptions="Center"
+                              Text="TabContent4" />
+                      </Grid>
+                </xct:TabViewItem>
+
+                <xct:TabViewItem
+                    Icon="circle.png"
+                    Text="Tab 5"
+                    TextColor="Black"
+                    FontSize="12">
+                      <Grid>
+                          <Label    
+                              HorizontalOptions="Center"
+                              VerticalOptions="Center"
+                              Text="TabContent5" />
+                      </Grid>
                     </xct:TabViewItem>
+                
             </xct:TabView>
       
         </ScrollView>
