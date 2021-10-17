@@ -296,7 +296,7 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                            <Image Margin="-10" HeightRequest="50" WidthRequest="50" VerticalOptions="CenterAndExpand" Grid.Column="1" Source="Host.png"/>
+                            <Image Margin="-10" HeightRequest="51" WidthRequest="51" VerticalOptions="CenterAndExpand" Grid.Column="1" Source="Host.png"/>
                         </Grid>
 
                     </StackLayout>
