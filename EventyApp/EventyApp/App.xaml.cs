@@ -20,6 +20,9 @@ namespace EventyApp
             InitializeComponent();
 
             MainPage = new ProfilePageView();
+
+            Sharpnado.Tabs.Initializer.Initialize(false, false);
+            Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
         }
 
         protected override void OnStart()
