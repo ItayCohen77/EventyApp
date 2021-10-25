@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace EventyApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProfilePageView : ContentPage
+    public partial class AccountSettingsView : ContentPage
     {
-        public ProfilePageView()
+        public AccountSettingsView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.ProfilePageViewModel();
         }
     }
 }

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace EventyApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ExplorePageView : ContentPage
+    public partial class LoginView : ContentPage
     {
-        public ExplorePageView()
+        public LoginView()
         {
             InitializeComponent();
         }

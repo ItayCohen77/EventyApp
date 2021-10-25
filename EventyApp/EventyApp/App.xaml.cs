@@ -19,7 +19,7 @@ namespace EventyApp
         {
             InitializeComponent();
 
-            MainPage = new ProfilePageView();
+            MainPage = new TabControlView();
 
             Sharpnado.Tabs.Initializer.Initialize(false, false);
             Sharpnado.Shades.Initializer.Initialize(loggerEnable: false);
